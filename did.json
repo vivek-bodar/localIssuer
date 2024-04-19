@@ -6,13 +6,27 @@
     ],
     "id": "did:web:vivek-bodar.github.io:localIssuer",
     "authentication": ["did:web:vivek-bodar.github.io:localIssuer#key-1"],
-    "service": [],
+    "service": [
+        {
+            "id": "did:web:vivek-bodar.github.io:localIssuer#did-communication",
+            "type": "did-communication",
+            "serviceEndpoint": "http://192.168.155.10:8000",
+            "accept": [
+                "didcomm/aip2;env=rfc19"
+            ],
+            "recipient_keys": [
+                "did:web:vivek-bodar.github.io:localIssuer#key-1"
+            ],
+            "routing_keys": [],
+            "priority": 1
+        }
+    ],
     "verificationMethod": [
         {
             "id": "did:web:vivek-bodar.github.io:localIssuer#key-1",
             "type": "Ed25519VerificationKey2018",
             "controller": "did:web:vivek-bodar.github.io:localIssuer",
-            "publicKeyBase58": "5NQtDSEH3aUUyaH8hUGSbR6GLUHJezNBirGJj2fgVuFV"
+            "publicKeyBase58": "6kj8oMXoq9opAZ4bAGYWnaKucWsoqG5xK2NVeHbsN5wp"
         }
     ],
     "alsoKnownAs": [],
